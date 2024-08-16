@@ -1,0 +1,23 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: vllm-aug16 
+  description: Secure Supply Chain Example for Chatbot Application example with LLM enabled chat applications   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:
+    # ArgoCD apps from this template used rhtap-gitops as the grouping
+    argocd/app-selector: rhtap/gitops=vllm-aug16  
+    janus-idp.io/tekton: vllm-aug16 
+    backstage.io/kubernetes-id: vllm-aug16 
+    backstage.io/techdocs-ref: dir:. 
+    quay.io/repository-slug: jctestorg/vllm-aug16
+  tags: ["ai", "llamacpp", "vllm", "python"] 
+spec:
+  type: service
+  owner: user:guest 
+  lifecycle: experimental
+ 
